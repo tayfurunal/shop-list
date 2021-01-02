@@ -1,21 +1,56 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text } from "react-native";
+import {
+  createAppContainer,
+  createSwitchNavigator,
+  createStackNavigator,
+  createDrawerNavigator,
+} from "react-navigation";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import WelcomeScreen from "./screens/AppSwitchNavigator/WelcomeScreen";
+import { Ionicons } from "@expo/vector-icons";
+import HomeScreen from "./screens/HomeScreen";
+import SignUpScreen from "./screens/SignUpScreen";
+import SettingsScreen from "./screens/SettingsScreen";
+const App = () => {
+  return <AppContainer />;
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+const AppDrawerNavigator = createDrawerNavigator({
+  HomeScreen: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: "Home",
+      drawerIcon: () => <Ionicons name="ios-home" size={24} />,
+    },
+  },
+  SettingsScreen: {
+    screen: SettingsScreen,
+    navigationOptions: {
+      title: "Settings",
+      drawerIcon: () => <Ionicons name="ios-settings" size={24} />,
+    },
   },
 });
+
+const LoginStackNavigator = createStackNavigator({
+  WelcomeScreen: {
+    screen: WelcomeScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  SignUpScreen: {
+    screen: SignUpScreen,
+    navigationOptions: {},
+  },
+});
+
+const AppSwitchNavigator = createSwitchNavigator({
+  LoginStackNavigator,
+  AppDrawerNavigator,
+});
+
+const AppContainer = createAppContainer(AppSwitchNavigator);
+
+export default App;
