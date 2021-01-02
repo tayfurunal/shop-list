@@ -15,7 +15,7 @@ export default class WelcomeScreen extends Component {
             justifyContent: "center",
           }}
         >
-          <Ionicons name="ios-bookmarks" size={150} color={colors.logoColor} />
+          <Ionicons name="ios-cart" size={150} color={colors.logoColor} />
           <Text style={{ fontSize: 45, fontWeight: "normal" }}>
             Alışveriş Listem
           </Text>

@@ -8,31 +8,10 @@ const ListItem = ({ item, children, marginVertical, editable, onPress }) => {
   return (
     <View style={[styles.listItemContainer, { marginVertical }]}>
       <View style={styles.imageContainer}>
-        <TouchableOpacity
-          disabled={!editable}
-          style={{ flex: 1 }}
-          onPress={() => onPress(item)}
-        >
-          {item.image ? (
-            <NetworkImage
-              source={{ uri: item.image }}
-              style={styles.image}
-              indicator={ProgressPie}
-              indicatorProps={{
-                size: 40,
-                borderWidth: 0,
-                color: colors.logoColor,
-                unfilledColor: "rgba(200,200,200,0.2)",
-              }}
-              imageStyle={{ borderRadius: 35 }}
-            />
-          ) : (
-            <Image
-              source={require("../assets/icon.png")}
-              style={styles.image}
-            />
-          )}
-        </TouchableOpacity>
+        <Image
+          source={require("../assets/shopcart.jpg")}
+          style={styles.image}
+        />
       </View>
       <View style={styles.listItemTitleContainer}>
         <Text style={styles.listItemTitle}>{item.name}</Text>
@@ -68,7 +47,7 @@ const styles = StyleSheet.create({
   listItemTitleContainer: {
     flex: 1,
     justifyContent: "center",
-    paddingLeft: 5,
+    paddingLeft: 10,
   },
   listItemTitle: {
     fontWeight: "100",
