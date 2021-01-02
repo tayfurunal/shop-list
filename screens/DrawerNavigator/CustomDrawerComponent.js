@@ -26,7 +26,7 @@ class CustomDrawerComponent extends React.Component {
             paddingTop: (Platform.OS = "android" ? 20 : 0),
           }}
         >
-          <Ionicons name="ios-bookmarks" size={100} color={colors.logoColor} />
+          <Ionicons name="ios-cart" size={100} color={colors.logoColor} />
           <Text style={{ fontSize: 24, color: "white", fontWeight: "100" }}>
             Menü
           </Text>
