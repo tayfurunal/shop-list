@@ -23,7 +23,7 @@ class ShopsPurchasedScreen extends Component {
           keyExtractor={(item, index) => index.toString()}
           ListEmptyComponent={
             <View style={{ margin: 50, alignItems: "center" }}>
-              <Text style={{ fontWeight: "bold" }}>Hiç Ürün Bulumuyor</Text>
+              <Text style={{ fontWeight: "bold", color:colors.txtWhite }}>Hiç Ürün Bulumuyor</Text>
             </View>
           }
         />

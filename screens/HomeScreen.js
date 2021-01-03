@@ -18,6 +18,7 @@ import { snapshotToArray } from "../helpers/firebaseHelpers";
 import * as firebase from "firebase/app";
 import { connect } from "react-redux";
 import Swipeout from "react-native-swipeout";
+import { color } from "react-native-reanimated";
 
 class HomeScreen extends Component {
   constructor(props) {
@@ -260,8 +261,8 @@ class HomeScreen extends Component {
                 flex: 1,
                 backgroundColor: "transparent",
                 paddingLeft: 5,
-                borderColor: colors.listItemBg,
-                borderBottomWidth: 5,
+                borderColor: colors.txtWhite,
+                borderBottomWidth: 1,
                 fontSize: 22,
                 fontWeight: "200",
                 color: colors.txtWhite,
@@ -280,7 +281,7 @@ class HomeScreen extends Component {
             keyExtractor={(item, index) => index.toString()}
             ListEmptyComponent={
               <View style={{ margin: 50, alignItems: "center" }}>
-                <Text style={{ fontWeight: "bold" }}>Hiç Ürün Bulumuyor</Text>
+                <Text style={{ fontWeight: "bold", color:colors.txtWhite }}>Hiç Ürün Bulumuyor</Text>
               </View>
             }
           />
@@ -295,7 +296,7 @@ class HomeScreen extends Component {
                   width: 50,
                   height: 50,
                   borderRadius: 25,
-                  backgroundColor: colors.bgPrimary,
+                  backgroundColor: colors.txtWhite,
                   alignItems: "center",
                   justifyContent: "center",
                 }}

@@ -11,6 +11,7 @@ import "firebase/auth";
 import "firebase/database";
 import colors from "../assets/colors";
 import CustomActionButton from "../components/CustomActionButton";
+import { color } from "react-native-reanimated";
 
 class LoginScreen extends Component {
   state = {
@@ -35,14 +36,16 @@ class LoginScreen extends Component {
         this.setState({ isLoading: false });
         switch (err.code) {
           case "auth/user-not-found":
-            alert("A user with that email does not exist. Try signing up.");
+            alert(
+              "Bu bilgilere sahip kullanıcı bulunmamaktadır. Tekrar Deneyin."
+            );
             break;
           case "auth/invalid-email":
-            alert("Please enter an email address.");
+            alert("Lütfen geçerli bir email adresi giriniz.");
         }
       }
     } else {
-      alert("Please enter email and password.");
+      alert("Lütfen email ve parolanızı giriniz.");
     }
   };
 
@@ -71,13 +74,13 @@ class LoginScreen extends Component {
         console.log(err);
         this.setState({ isLoading: false });
         if (err.code === "auth/email-already-in-use") {
-          alert("User already exists. Try Log in.");
+          alert("Kullanıcı zaten var. Giriş yapmayı deneyiniz.");
         } else {
           console.log(err);
         }
       }
     } else {
-      alert("Please enter email and password");
+      alert("Lütfen email ve parolanızı giriniz.");
     }
   };
 
@@ -102,7 +105,7 @@ class LoginScreen extends Component {
         <View style={{ flex: 1, justifyContent: "center" }}>
           <TextInput
             style={styles.textInput}
-            placeholder="mehmet@gmail.com"
+            placeholder="placeholder@mail.com"
             placeholderTextColor={colors.bgTextInputDark}
             keyboardType="email-address"
             onChangeText={(email) => this.setState({ email })}
@@ -119,7 +122,7 @@ class LoginScreen extends Component {
           <View style={{ alignItems: "center" }}>
             <CustomActionButton
               onPress={this.onSignIn}
-              style={[styles.loginButtons, { borderColor: colors.bgPrimary }]}
+              style={[styles.loginButtons, { borderColor: colors.listItemBg }]}
             >
               <Text style={{ color: "white", fontWeight: "100" }}>
                 Giriş Yap
@@ -127,13 +130,13 @@ class LoginScreen extends Component {
             </CustomActionButton>
             <CustomActionButton
               onPress={this.onSignUp}
-              style={[styles.loginButtons, { borderColor: colors.bgError }]}
+              style={[styles.loginButtons, { borderColor: colors.listItemBg }]}
             >
               <Text style={{ color: "white", fontWeight: "100" }}>Kaydol</Text>
             </CustomActionButton>
           </View>
         </View>
-        <View style={{ flex: 1 }}></View>
+         <View style={{ flex: 0.2 }}></View> 
       </View>
     );
   }
@@ -148,8 +151,11 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 50,
-    borderWidth: 0.5,
+    borderWidth: 0,
+    borderBottomWidth: 1,
+
     borderColor: colors.borderColor,
+    borderRadius: 5,
     marginHorizontal: 40,
     marginBottom: 10,
     color: colors.txtWhite,
@@ -157,8 +163,9 @@ const styles = StyleSheet.create({
   },
   loginButtons: {
     borderWidth: 0.5,
-    backgroundColor: "transparent",
+    backgroundColor: colors.listItemBg,
     marginTop: 10,
+    borderRadius: 20,
     width: 200,
   },
 });

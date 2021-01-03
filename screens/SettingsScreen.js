@@ -21,14 +21,15 @@ class SettingScreen extends Component {
         <CustomActionButton
           style={{
             width: 200,
-            backgroundColor: "transparent",
+            backgroundColor: colors.listItemBg,
             borderWidth: 0.5,
-            borderColor: colors.bgError,
+            borderRadius:20,
+            borderColor: colors.listItemBg,
           }}
-          title="Log Out"
+          title="Çıkış Yap"
           onPress={this.signOut}
         >
-          <Text style={{ fontWeight: "100", color: "white" }}>Log Out</Text>
+          <Text style={{ fontWeight: "100", color: "white" }}>Çıkış Yap</Text>
         </CustomActionButton>
       </View>
     );

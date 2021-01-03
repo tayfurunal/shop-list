@@ -170,7 +170,12 @@ const LoginStackNavigator = createStackNavigator(
     },
     LoginScreen: {
       screen: LoginScreen,
-      navigationOptions: {},
+      navigationOptions: {
+        headerTitle:"Üyelik Ekranı",
+        headerTitleStyle:{
+          color:"#fff"
+        }
+      },
     },
   },
   {
