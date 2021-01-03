@@ -6,19 +6,15 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-  Image,
   FlatList,
 } from "react-native";
-import ShopCount from "../components/ShopCount";
 import { Ionicons } from "@expo/vector-icons";
-import CustomActionButton from "../components/CustomActionButton";
 import colors from "../assets/colors";
 import ListItem from "../components/ListItem";
 import { snapshotToArray } from "../helpers/firebaseHelpers";
 import * as firebase from "firebase/app";
 import { connect } from "react-redux";
 import Swipeout from "react-native-swipeout";
-import { color } from "react-native-reanimated";
 
 class HomeScreen extends Component {
   constructor(props) {

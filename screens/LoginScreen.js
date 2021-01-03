@@ -11,7 +11,6 @@ import "firebase/auth";
 import "firebase/database";
 import colors from "../assets/colors";
 import CustomActionButton from "../components/CustomActionButton";
-import { color } from "react-native-reanimated";
 
 class LoginScreen extends Component {
   state = {
@@ -29,7 +28,6 @@ class LoginScreen extends Component {
           .signInWithEmailAndPassword(this.state.email, this.state.password);
         if (response) {
           this.setState({ isLoading: false });
-          //   Navigate the user to homepage
           this.props.navigation.navigate("LoadingScreen");
         }
       } catch (err) {

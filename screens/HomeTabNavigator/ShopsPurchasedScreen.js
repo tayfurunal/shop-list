@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  ActivityIndicator,
 } from "react-native";
 import { connect } from "react-redux";
 import ListItem from "../../components/ListItem";

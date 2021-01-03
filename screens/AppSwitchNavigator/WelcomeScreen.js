@@ -3,7 +3,6 @@ import { Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import colors from "../../assets/colors";
 import CustomActionButton from "../../components/CustomActionButton";
-import { color } from "react-native-reanimated";
 export default class WelcomeScreen extends Component {
   render() {
     return (

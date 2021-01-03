@@ -1,11 +1,11 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyBy7XvkbahMd0H-clxeNKvrMGriunquZIU",
-  authDomain: "personal-library-ab40c.firebaseapp.com",
+  apiKey: "AIzaSyBLSsmVzO4xX0x9lhbmYXovv5tXAx7rI70",
+  authDomain: "personal-library-e9533.firebaseapp.com",
   databaseURL:
-    "https://personal-library-ab40c-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "personal-library-ab40c",
-  storageBucket: "personal-library-ab40c.appspot.com",
-  messagingSenderId: "176163691930",
-  appId: "1:176163691930:web:8beaff738c12a1397f6e23",
-  measurementId: "G-WXR85VFV8K",
+    "https://personal-library-e9533-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "personal-library-e9533",
+  storageBucket: "personal-library-e9533.appspot.com",
+  messagingSenderId: "258764193519",
+  appId: "1:258764193519:web:fa792ebfc9643f40dfe51a",
+  measurementId: "G-S4FNGZL72C",
 };

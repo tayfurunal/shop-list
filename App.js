@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
 console.disableYellowBox = true;
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
