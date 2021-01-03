@@ -193,17 +193,16 @@ class HomeScreen extends Component {
 
     if (!item.read) {
       swipeoutButtons.unshift({
-        text: "Mark Read",
+        text: "Alındı",
         component: (
           <View
             style={{
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 15,
             }}
           >
-            <Text style={{ color: colors.txtWhite }}>Mark as Read</Text>
+            <Text style={{ color: colors.txtWhite }}>Alındı</Text>
           </View>
         ),
         backgroundColor: colors.bgSuccessDark,
@@ -211,17 +210,16 @@ class HomeScreen extends Component {
       });
     } else {
       swipeoutButtons.unshift({
-        text: "Mark Unread",
+        text: "Alınacaklara Ekle",
         component: (
           <View
             style={{
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
-              paddingLeft: 15,
             }}
           >
-            <Text style={{ color: colors.txtWhite }}>Mark Unread</Text>
+            <Text style={{ color: colors.txtWhite }}>Alınmadı</Text>
           </View>
         ),
         backgroundColor: colors.bgUnread,
@@ -239,10 +237,10 @@ class HomeScreen extends Component {
         <ListItem editable={true} marginVertical={0} item={item}>
           {item.read && (
             <Ionicons
-              style={{ marginRight: 5 }}
+              style={{ marginRight: 15 }}
               name="ios-checkmark"
               color={colors.logoColor}
-              size={30}
+              size={60}
             />
           )}
         </ListItem>

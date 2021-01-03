@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
+console.disableYellowBox = true;
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
-
 import WelcomeScreen from "./screens/AppSwitchNavigator/WelcomeScreen";
 import { Ionicons } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
